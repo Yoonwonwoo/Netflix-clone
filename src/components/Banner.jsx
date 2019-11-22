@@ -2,18 +2,23 @@ import React from "react";
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-width: 100vw;
-height: 60px;
+width: 100%;
+height: 70px;
 display: flex;
 flex-direction: row;
 align-items: center;
-padding: 2px 40px;
+padding: 8px 62px;
 box-sizing: border-box;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
 `;
 
 const Logo = styled.img`
-width: 70px;
-margin-right: 23px;
+width: 97px;
+margin-right: 25px;
 `;
 
 const NavText = styled.ul`
@@ -23,12 +28,12 @@ color: #e5e5e5;
 height: 100%;
 flex: 1;
 align-items: center;
-margin: 8px 0;
-font-size: 10px;
+margin: 16px 0;
+font-size: 14px;
 `;
 
 const NavTextItem = styled.li`
-margin-left: 14px;
+margin-left: 20px;
 
 &:hover {
     color : #b3b3b3;
@@ -46,10 +51,10 @@ margin: 16px 0;
 
 const NavIconItem = styled.li`
 width: fit-content;
-padding: 10px;
+padding: 16px;
 
 & > img {
-    height: 16px;
+    height: 24px;
 }
 `;
 
