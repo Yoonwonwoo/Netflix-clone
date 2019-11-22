@@ -9,6 +9,7 @@ color : white;
 margin: 0 auto;
 width: calc(100% - (${BtnSize} + ${BtnSize}));
 overflow: visible;
+margin-bottom: 3%;
 
 .title {
     font-weight : bold;
@@ -58,10 +59,12 @@ const MovieContainer = props => {
     }, []);
 
     const onClickLeft = () => {
+        if(page > 1)
         setPage(page - 1);
     };
 
     const onClickRight = () => {
+        if(page < (props.movies.length/5))
         setPage(page + 1);
     };
 

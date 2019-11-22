@@ -10,7 +10,7 @@ class Main extends React.Component {
 
     render(){
         return (
-            <div style={{marginTop: "43%", overflowX: "hidden"}}>
+            <div style={{marginTop: "44%", overflowX: "hidden"}}>
                 <Banner/>
                 <Preview/>
                 <MovieContainer title="TV프로그램" movies={[

@@ -20,6 +20,11 @@ margin-right: 10px;
     justify-content: center;
     align-items: center;
 }
+
+&:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
 `;
 
 const MovieItem = props => {
