@@ -38,15 +38,16 @@ margin-right: 10px;
 }
 `;
 
-const MovieItem = props => {
+const FavoriteItem = props => {
     return (
         <Wrapper>
-            <div>{props.title}</div>
             <img
-            src={"http://image.tmdb.org/t/p/w185" + props.backdrop_path}
-            alt=""/>
+            src={"https"+ props.backdrop_path}
+            alt=""
+            
+        />
         </Wrapper>
     )
 }
 
-export default MovieItem
+export default FavoriteItem

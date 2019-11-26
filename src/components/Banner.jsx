@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components"
+import {Link} from "react-router-dom"
 
 const Wrapper = styled.div`
 width: 100%;
@@ -71,11 +72,11 @@ const Banner = () => {
         <Wrapper>
         <Logo src="https://cdn.pixelprivacy.com/wp-content/uploads/2017/12/Netflix-Logo-1024x277.png"/>
         <NavText>
-            <NavTextItem onClick={e => change(0)} style={num === 0 ? {color: "#fff", fontWeight: "bold"} : {}}>홈</NavTextItem>
-            <NavTextItem onClick={e => change(1)} style={num === 1 ? {color: "#fff", fontWeight: "bold" } : {}}>TV프로그램</NavTextItem>
+            <NavTextItem onClick={e => change(0)} style={num === 0 ? {color: "#fff", fontWeight: "bold"} : {}}><Link to="/">홈</Link></NavTextItem>
+            <NavTextItem onClick={e => change(1)} style={num === 1 ? {color: "#fff", fontWeight: "bold" } : {}}><Link to="/tv">TV 프로그램</Link></NavTextItem>
             <NavTextItem onClick={e => change(2)} style={num === 2 ? {color: "#fff", fontWeight: "bold" } : {}}>영화</NavTextItem>
-            <NavTextItem onClick={e => change(3)} style={num === 3 ? {color: "#fff", fontWeight: "bold" } : {}}>최신 등록 콘텐츠</NavTextItem>
-            <NavTextItem onClick={e => change(4)} style={num === 4 ? {color: "#fff", fontWeight: "bold" } : {}}>내가 찜한 콘텐츠</NavTextItem>
+            <NavTextItem onClick={e => change(3)} style={num === 3 ? {color: "#fff", fontWeight: "bold" } : {}}><Link to="/new">최신 등록 콘텐츠</Link></NavTextItem>
+            <NavTextItem onClick={e => change(4)} style={num === 4 ? {color: "#fff", fontWeight: "bold" } : {}}><Link to="/favorite">내가 찜한 콘텐츠</Link></NavTextItem>
         </NavText>
         <NavIcon>
             <NavIconItem><img src="/search.svg" alt=""/></NavIconItem>

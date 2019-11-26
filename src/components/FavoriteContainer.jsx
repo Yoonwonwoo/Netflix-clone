@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components"
 import MovieItem from './MovieItem'
+import FavoriteItem from "./FavoriteItem";
 
 const BtnSize = "50px";
 
@@ -50,7 +51,7 @@ left: 100%;
 right: none;
 `;
 
-const MovieContainer = props => {
+const FavoriteContainer = props => {
     const [page, setPage] = React.useState(1);
     const [sliderWidth, setSliderWidth] = React.useState(0);
     const slider = React.useRef(undefined);
@@ -77,7 +78,7 @@ const MovieContainer = props => {
                 <BtnRight onClick={onClickRight}>{">"}</BtnRight>
                 <div className="slider" ref={slider}>
                     {(props.movies || []).map((value, idx) => (
-                        <MovieItem key={idx} title={value.title} backdrop_path={value.backdrop_path}/>
+                        <FavoriteItem key={idx} title={value.title} backdrop_path={value}/>
                     ))}
                 </div>
             </div>
@@ -85,4 +86,4 @@ const MovieContainer = props => {
     );
 };
 
-export default MovieContainer;
+export default FavoriteContainer;
